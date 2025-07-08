@@ -23,12 +23,19 @@ It also creates a **Threat Match Rule** in Kibana, which triggers an alert when 
 
 project/
 ├── auth_gmail.py # Gmail API OAuth authorization
+
 ├── parse_iocs.py # Main script to extract and forward IOCs
+
 ├── send_to_elastic.py # Send data to Elastic Cloud
+
 ├── config.py # Elastic Cloud config
+
 ├── token.json # OAuth token (auto-generated)
+
 ├── credentials.json # OAuth credentials from Google
+
 ├── requirements.txt # All required Python libs
+
 
 
 ---
