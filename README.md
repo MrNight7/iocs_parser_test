@@ -52,7 +52,7 @@ project/
 ---
 
 ## ✅ Setup Instructions
-
+```bash
 ### 1. 📦 Install dependencies
 
 pip install -r requirements.txt
