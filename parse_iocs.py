@@ -32,7 +32,6 @@ def extract_urls_and_domains(html):
     return urls, domains
 
 def extract_html_from_parts(payload):
-    """Рекурсивно извлекает HTML из вложений"""
     if 'parts' in payload:
         for part in payload['parts']:
             result = extract_html_from_parts(part)
@@ -68,14 +67,14 @@ def parse_email(service, msg_id):
     }
 
 def main():
-    print("⏳ Авторизация Gmail...")
+    print("⏳ Auth Gmail...")
     service = get_gmail_service()
 
-    print("🔍 Получаем спам-письма...")
+    print("🔍Get SPAM messages...")
     messages = service.users().messages().list(userId='me', labelIds=['SPAM'], maxResults=10).execute().get('messages', [])
-    print(f"📥 Найдено спам-писем: {len(messages)}\n")
+    print(f"📥 Fund SPAM-Messages: {len(messages)}\n")
 
-    print("🔗 Подключаемся к Elastic Cloud...")
+    print("🔗 Connecting to Elastic Cloud...")
     es = connect_elastic(ELASTIC_HOST, ELASTIC_API_KEY)
 
     for i, msg in enumerate(messages):
@@ -95,7 +94,7 @@ def main():
 
         send_ioc(es, ELASTIC_INDEX, data)
 
-    print("\n✅ Завершено. Данные отправлены в Elastic Cloud.")
+    print("\n✅ Done. Data sended to Elastic Cloud.")
 
 if __name__ == '__main__':
     main()
