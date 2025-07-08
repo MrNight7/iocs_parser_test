@@ -57,7 +57,7 @@ project/
 
 ```bash
 pip install -r requirements.txt
-
+```bash
 2. 🔑 Create Gmail OAuth Credentials
 Go to Google Cloud Console
 
