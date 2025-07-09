@@ -102,6 +102,51 @@ Rule name:  IOC Domain Match from Gmail Spam
 Index patterns (log data):  logs-*, filebeat-*, http-*
 Threat indicator index: gmail-iocs
 
-| Source field | Threat field |
+| Log Field    | Threat Field |
 | ------------ | ------------ |
 | `url.domain` | `domains`    |
+
+Rule Schedule:
+Runs every 1 minute
+
+Look back time: 5 minutes
+
+7. ✅ Step-by-Step Installation (Windows)
+  1. Go to Kibana → Fleet
+Kibana → Management → Fleet → Agents → Add Agent
+  2. Select:
+Platform: Windows
+
+Agent Policy: Choose or create one (e.g. Workstation Policy)
+
+Copy the generated Enrollment Command — you'll use this in PowerShell.
+
+  3. Download the Elastic Agent
+Download the .zip file for Windows from:
+
+🔗 https://www.elastic.co/downloads/elastic-agent
+
+Example: elastic-agent-8.x.x-windows-x86_64.zip
+
+  4. Extract and Install
+Open PowerShell as Administrator, navigate to the extracted folder, and run the following command:
+
+.\elastic-agent.exe install --url=https://<your-deployment-url>:443 --enrollment-token=<your-token> --insecure
+Replace <your-deployment-url> and <your-token> with the values from Fleet.
+
+🔐 You can use --insecure only for development/testing purposes. In production, ensure SSL is valid.
+
+✅ Agent Will:
+Install as a service
+Connect to Elastic Cloud
+Begin collecting logs/metrics as per assigned policy
+
+📦 Enable HTTP / DNS / Network Monitoring
+To collect HTTP traffic (used for IOC detection):
+
+Go to:
+Kibana → Fleet → Agent Policies → [Your Policy]
+Click Add Integration
+
+
+![image](https://github.com/user-attachments/assets/10f4975b-19a5-47e1-a7ff-b026f6801a73)
