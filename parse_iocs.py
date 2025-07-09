@@ -76,6 +76,10 @@ def main():
 
     print("🔗 Connecting to Elastic Cloud...")
     es = connect_elastic(ELASTIC_HOST, ELASTIC_API_KEY)
+    
+    if not es.indices.exists(index=ELASTIC_INDEX):
+        print(f"Index '{ELASTIC_INDEX}'not found. Create...")
+        es.indices.create(index=ELASTIC_INDEX)
 
     for i, msg in enumerate(messages):
         data = parse_email(service, msg['id'])
