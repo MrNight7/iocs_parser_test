@@ -148,5 +148,6 @@ Go to:
 Kibana → Fleet → Agent Policies → [Your Policy]
 Click Add Integration
 
+More info: https://www.elastic.co/docs/reference/fleet
 ```
 ![image](https://github.com/user-attachments/assets/10f4975b-19a5-47e1-a7ff-b026f6801a73)
