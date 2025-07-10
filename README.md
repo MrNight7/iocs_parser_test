@@ -110,8 +110,9 @@ Rule Schedule:
 Runs every 1 minute
 
 Look back time: 5 minutes
+```
 <img width="1100" height="1005" alt="image" src="https://github.com/user-attachments/assets/7ecc0b1c-cca9-4b03-8ad9-e3766bfa3dc0" />
-
+```bash
 
 7. ✅ Step-by-Step Installation (Windows)
   1. Go to Kibana → Fleet
