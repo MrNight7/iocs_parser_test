@@ -159,7 +159,8 @@ More info: https://www.elastic.co/docs/reference/fleet
 
 
 ```bash
-📊 Dashboard: IOC Alerts Overview
+
+8. 📊 Dashboard: IOC Alerts Overview
 Index Pattern:
 ioc-alerts-log
 This is the custom index where your detection rule's action stores alert documents (via the Index Connector).
