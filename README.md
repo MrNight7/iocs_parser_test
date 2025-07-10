@@ -161,10 +161,6 @@ More info: https://www.elastic.co/docs/reference/fleet
 ```bash
 📊 Dashboard: IOC Alerts Overview
 Index Pattern:
-
-lua
-Copy
-Edit
 ioc-alerts-log
 This is the custom index where your detection rule's action stores alert documents (via the Index Connector).
 
@@ -189,10 +185,6 @@ Go to Kibana → Dashboard
 Click Create dashboard
 
 Name it:
-
-nginx
-Copy
-Edit
 IOC Alerts Overview
 Click + Create visualization
 
