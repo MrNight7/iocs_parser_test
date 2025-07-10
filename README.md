@@ -156,7 +156,7 @@ Click Add Integration
 
 More info: https://www.elastic.co/docs/reference/fleet
 ```
-![image](https://github.com/user-attachments/assets/10f4975b-19a5-47e1-a7ff-b026f6801a73)
+
 
 ```bash
 📊 Dashboard: IOC Alerts Overview
@@ -229,3 +229,5 @@ source_ip
 
 📛 Name: IOC Alert Table
 ```
+<img width="2712" height="857" alt="image" src="https://github.com/user-attachments/assets/507a5a1e-1a22-4f30-8698-7c9bdd5f215a" />
+
