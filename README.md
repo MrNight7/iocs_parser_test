@@ -110,6 +110,8 @@ Rule Schedule:
 Runs every 1 minute
 
 Look back time: 5 minutes
+<img width="1100" height="1005" alt="image" src="https://github.com/user-attachments/assets/7ecc0b1c-cca9-4b03-8ad9-e3766bfa3dc0" />
+
 
 7. ✅ Step-by-Step Installation (Windows)
   1. Go to Kibana → Fleet
@@ -151,98 +153,4 @@ Click Add Integration
 More info: https://www.elastic.co/docs/reference/fleet
 ```
 ![image](https://github.com/user-attachments/assets/10f4975b-19a5-47e1-a7ff-b026f6801a73)
-
-
-
-
-🛠️ Create IOC Match Detection Rule
-
-1. Go to:
-
-Kibana → Security → Detection & Response → Rules → Create Rule
-
-2. Choose Rule Type:
-
-▶️ Indicator Match
-
-This rule type checks if log data matches any known indicator (IOC).
-
-3. Configure Rule Details:
-
-Field
-
-Value
-
-Rule Name
-
-Alert on IOC Domain Match
-
-Description
-
-Detect access to IOC domain
-
-Rule Index (source logs)
-
-logs-http* or logs-*
-
-Indicator Index Pattern
-
-gmail-iocs
-
-Custom Query
-
-* (or leave blank)
-
-Threat Query
-
-*
-
-4. Indicator Field Mapping:
-
-Source Field in logs
-
-Threat Field in IOC index
-
-url.domain
-
-domains
-
-This matches any url.domain found in logs to domains extracted from spam.
-
-5. Schedule:
-
-Runs every: 1 minute
-
-Look back time: 5 minutes
-
-6. Optional: Add Actions
-
-Email alert
-
-Webhook
-
-Slack / Teams integration
-
-🧪 How to Test
-
-Open any link from a known IOC spam email.
-
-Elastic Agent (with HTTP/DNS integration) logs the request.
-
-Kibana will trigger an alert if the visited domain matches gmail-iocs.
-
-View Alerts:
-
-Kibana → Security → Alerts
-
-You’ll see:
-
-Matched domain
-
-Hostname
-
-Timestamp
-
-Rule name
-
 
