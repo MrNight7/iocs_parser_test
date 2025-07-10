@@ -158,6 +158,7 @@ More info: https://www.elastic.co/docs/reference/fleet
 ```
 ![image](https://github.com/user-attachments/assets/10f4975b-19a5-47e1-a7ff-b026f6801a73)
 
+```bash
 📊 Dashboard: IOC Alerts Overview
 Index Pattern:
 
@@ -235,3 +236,4 @@ host
 source_ip
 
 📛 Name: IOC Alert Table
+```
