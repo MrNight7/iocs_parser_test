@@ -231,4 +231,5 @@ source_ip
 📛 Name: IOC Alert Table
 ```
 <img width="2712" height="857" alt="image" src="https://github.com/user-attachments/assets/507a5a1e-1a22-4f30-8698-7c9bdd5f215a" />
+<img width="3171" height="1102" alt="image" src="https://github.com/user-attachments/assets/9a168528-aec5-4a75-9497-9e498062b32e" />
 
