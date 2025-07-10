@@ -156,78 +156,7 @@ More info: https://www.elastic.co/docs/reference/fleet
 ```
 
 
-```bash
 
-8. 📊 Dashboard: IOC Alerts Overview
-Index Pattern:
-ioc-alerts-log
-This is the custom index where your detection rule's action stores alert documents (via the Index Connector).
-
-✅ Step 1: Create the Index Pattern
-Go to Kibana → Stack Management → Data Views
-
-Click Create data view
-
-Set:
-
-Name: ioc-alerts-log
-
-Index pattern: ioc-alerts-log
-
-Time field: @timestamp ✅
-
-Click Create data view
-
-✅ Step 2: Create the Dashboard
-Go to Kibana → Dashboard
-
-Click Create dashboard
-
-Name it:
-IOC Alerts Overview
-Click + Create visualization
-
-📊 Recommended Visualizations
-1. 📈 Line Chart – Alert Count Over Time
-Index pattern: ioc-alerts-log
-
-X-axis: @timestamp (Date Histogram)
-
-Y-axis: Count
-
-📛 Name: Alerts Over Time
-
-2. 🥧 Pie Chart – Top IOC Domains
-Bucket: Terms
-
-Field: domain
-
-Size: Top 10
-
-📛 Name: Top Matched Domains
-
-3. 📊 Bar Chart – Alerts per Host
-X-axis: host
-
-Y-axis: Count
-
-📛 Name: Alerts by Host
-
-4. 📋 Data Table – IOC Alert Table
-Fields:
-
-@timestamp
-
-alert
-
-domain
-
-host
-
-source_ip
-
-📛 Name: IOC Alert Table
-```
 <img width="2712" height="857" alt="image" src="https://github.com/user-attachments/assets/507a5a1e-1a22-4f30-8698-7c9bdd5f215a" />
 <img width="3171" height="1102" alt="image" src="https://github.com/user-attachments/assets/9a168528-aec5-4a75-9497-9e498062b32e" />
 
